@@ -87,7 +87,22 @@ const spin = () => {
     }; 
 
 
+const transpose = (reels) => {
+    const rows = [];
 
+    for (let i =0; i < ROWS; i++) {
+      rows.push([]);
+      for (let j = 0; j < COLS; j++)
+          rows[i].push(reels[j][i])
+    }
+    return rows;
+};
+
+const printRows = (rows) => {
+    for (const row of rows) {
+
+    }
+};
 let balance = deposit();
 const numberOfLines = getNumberOfLines();
 const bet = getBet(balance, numberOfLines);
